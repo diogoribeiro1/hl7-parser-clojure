@@ -1,0 +1,16 @@
+(ns hl7-parser-clojure.segments.qrd)
+
+(defrecord QRD
+  [query-datetime             ; QRD-1: Data e hora da consulta (e.g., "20240101123000" para 01-Jan-2024 12:30:00)
+   query-format-code          ; QRD-2: Código do formato da consulta (e.g., "R" para resposta relacional)
+   query-priority             ; QRD-3: Prioridade da consulta (e.g., "D" para rotina/normal)
+   query-id                   ; QRD-4: Identificador da consulta (ID único da consulta)
+   deferred-response-type     ; QRD-5: Tipo de resposta diferida (opcional, e.g., "L" para lista)
+   deferred-response-datetime ; QRD-6: Data e hora para resposta diferida (opcional)
+   quantity-limited-request   ; QRD-7: Quantidade de itens a serem retornados (e.g., "10")
+   who-subject-filter         ; QRD-8: Quem é o objeto do filtro (e.g., identificador do paciente)
+   what-subject-filter        ; QRD-9: Qual é o assunto do filtro (e.g., "DIAGNOSIS" para diagnóstico)
+   what-department-data-code  ; QRD-10: Código do departamento a ser incluído na consulta (opcional)
+   what-data-code-value-qual  ; QRD-11: Qualificação de valor do código de dados (opcional)
+   query-results-level        ; QRD-12: Nível dos resultados da consulta (e.g., "FULL" para completo)
+   ])

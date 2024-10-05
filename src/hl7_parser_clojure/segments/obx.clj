@@ -1,0 +1,23 @@
+(ns hl7-parser-clojure.segments.obx)
+
+(defrecord OBX
+  [set-id                                                   ; OBX-1: ID do conjunto (sequencial para identificar cada OBX em uma mensagem)
+   value-type                                               ; OBX-2: Tipo de valor (e.g., "NM" para numérico, "ST" para string)
+   observation-identifier                                   ; OBX-3: Identificador da observação (código que descreve a observação, como LOINC)
+   observation-sub-id                                       ; OBX-4: Sub-ID da observação (usado para diferenciar múltiplas observações do mesmo tipo)
+   observation-value                                        ; OBX-5: Valor da observação (e.g., "5.3", "Normal", ou um código)
+   units                                                    ; OBX-6: Unidade de medida (e.g., "mg/dL", "cm")
+   references-range                                         ; OBX-7: Faixa de referência (e.g., "4.5-10.0")
+   abnormal-flags                                           ; OBX-8: Indicador de anormalidade (e.g., "H" para alto, "L" para baixo)
+   probability                                              ; OBX-9: Probabilidade da observação (percentual, opcional)
+   nature-of-abnormal-test                                  ; OBX-10: Natureza do teste anormal (opcional, e.g., "A" para anormalidade)
+   observation-result-status                                ; OBX-11: Status do resultado da observação (e.g., "F" para final, "P" para preliminar)
+   effective-datetime                                       ; OBX-12: Data e hora efetiva da observação
+   observation-operator                                     ; OBX-13: Operador responsável pela observação (opcional, e.g., médico, técnico)
+   observation-method                                       ; OBX-14: Metodo utilizado para a observação (opcional, e.g., "ELISA", "PCR")
+   equipment-instance-identifier                            ; OBX-15: Identificador da instância do equipamento (opcional)
+   analysis-datetime                                        ; OBX-16: Data e hora da análise (opcional)
+   observation-site                                         ; OBX-17: Local da observação (opcional, e.g., "Right Arm")
+   observation-source                                       ; OBX-18: Fonte da observação (opcional)
+   observation-identifier-alternates                        ; OBX-19: Identificadores alternativos da observação (opcional)
+   ])
