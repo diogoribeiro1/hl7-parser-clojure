@@ -1,0 +1,250 @@
+QCK Message:
+
+
+MSH|^~\&|||||20240823103911||QCK^Q02|1|P|2.3.1||||||ASCII|||
+
+MSH|||^~\&|||||20240823103911||QCK^Q02|1|P|2.3.1||||||ASCII|||
+
+
+MSA|AA|1|Message accepted|||0
+ERR|0
+QAK|SR|OK
+
+DSR Message:
+MSH|||^~\&|||||20241001172113||DSR^Q03|1|P|2.3.1||||||ASCII|||
+MSA|AA|1|Message accepted|||0
+ERR|0
+QAK|SR|OK
+QRD|||RD|20240830||||RD||||T
+QRF||||||RCT|COR|ALL|
+DSP|1||John Doe|||
+DSP|2||2^27|||
+DSP|3||John Doe|||
+DSP|4|||||
+DSP|5||M|||
+DSP|6|||||
+DSP|7|||||
+DSP|8|||||
+DSP|9|||||
+DSP|10|||||
+DSP|11|||||
+DSP|12|||||
+DSP|13|||||
+DSP|15||outpatient|||
+DSP|16|||||
+DSP|17||own|||
+DSP|18|||||
+DSP|19|||||
+DSP|20|||||
+DSP|21||20240830|||
+DSP|22||3|||
+DSP|23||20241001172113|||
+DSP|24||N|||
+DSP|25|||||
+DSP|26|||||
+DSP|27|||||
+DSP|28||Dept1|||
+DSP|29||ALB|||
+DSP|30||CREA|||
+DSP|31||GLI|||
+DSC||
+
+Parsed QRY Message in JSON:
+[ {
+  "field-separator" : "^~\\&",
+  "encoding-characters" : "",
+  "sending-application" : "",
+  "sending-facility" : "",
+  "receiving-application" : "",
+  "receiving-facility" : "20240823103911",
+  "datetime-of-message" : "",
+  "security" : "QRY^Q02",
+  "message-type" : "1",
+  "message-control-id" : "P",
+  "processing-id" : "2.3.1",
+  "version-id" : "",
+  "sequence-number" : "",
+  "continuation-pointer" : "",
+  "accept-ack-type" : "",
+  "application-ack-type" : "",
+  "country-code" : "ASCII",
+  "character-set" : "",
+  "principal-language" : "",
+  "alternate-char-set" : "\n                  ",
+  "version-releases" : null,
+  "message-profile-id" : null,
+  "sending-responsible-org" : null,
+  "receiving-responsible-org" : null,
+  "sending-network-address" : null,
+  "receiving-network-address" : null
+}, {
+  "where-subject-filter" : "",
+  "when-data-start-datetime" : "",
+  "when-data-end-datetime" : "",
+  "who-subject-filter" : "",
+  "what-user-qualifier" : "",
+  "other-qry-subject-filter" : "RCT",
+  "which-date-time-qualifier" : "COR",
+  "which-date-time-status" : "ALL",
+  "date-selection-criteria" : ""
+} ]
+
+Parsed QCK Message in JSON:
+[ {
+  "field-separator" : "",
+  "encoding-characters" : "",
+  "sending-application" : "^~\\&",
+  "sending-facility" : "",
+  "receiving-application" : "",
+  "receiving-facility" : "",
+  "datetime-of-message" : "",
+  "security" : "20240823103911",
+  "message-type" : "",
+  "message-control-id" : "QCK^Q02",
+  "processing-id" : "1",
+  "version-id" : "P",
+  "sequence-number" : "2.3.1",
+  "continuation-pointer" : "",
+  "accept-ack-type" : "",
+  "application-ack-type" : "",
+  "country-code" : "",
+  "character-set" : "",
+  "principal-language" : "ASCII",
+  "alternate-char-set" : null,
+  "version-releases" : null,
+  "message-profile-id" : null,
+  "sending-responsible-org" : null,
+  "receiving-responsible-org" : null,
+  "sending-network-address" : null,
+  "receiving-network-address" : null
+}, {
+  "acknowledgment-code" : "AA",
+  "message-control-id" : "1",
+  "text-message" : "Message accepted",
+  "expected-sequence-number" : "",
+  "delayed-ack-type" : "",
+  "error-condition" : "0"
+} ]
+
+QCK Message:
+MSH|||^~\&|||||20240823103911||QCK^Q02|1|P|2.3.1||||||ASCII|||
+MSA|AA|1|Message accepted|||0
+ERR|0
+QAK|SR|OK
+
+DSR Message:
+MSH|||^~\&|||||20241001172113||DSR^Q03|1|P|2.3.1||||||ASCII|||
+MSA|AA|1|Message accepted|||0
+ERR|0
+QAK|SR|OK
+QRD|||RD|20240830||||RD||||T
+QRF||||||RCT|COR|ALL|
+DSP|1||John Doe|||
+DSP|2||2^27|||
+DSP|3||John Doe|||
+DSP|4|||||
+DSP|5||M|||
+DSP|6|||||
+DSP|7|||||
+DSP|8|||||
+DSP|9|||||
+DSP|10|||||
+DSP|11|||||
+DSP|12|||||
+DSP|13|||||
+DSP|15||outpatient|||
+DSP|16|||||
+DSP|17||own|||
+DSP|18|||||
+DSP|19|||||
+DSP|20|||||
+DSP|21||20240830|||
+DSP|22||3|||
+DSP|23||20241001172113|||
+DSP|24||N|||
+DSP|25|||||
+DSP|26|||||
+DSP|27|||||
+DSP|28||Dept1|||
+DSP|29||ALB|||
+DSP|30||CREA|||
+DSP|31||GLI|||
+DSC||
+
+Parsed QRY Message in JSON:
+[ {
+  "field-separator" : "^~\\&",
+  "encoding-characters" : "",
+  "sending-application" : "",
+  "sending-facility" : "",
+  "receiving-application" : "",
+  "receiving-facility" : "20240823103911",
+  "datetime-of-message" : "",
+  "security" : "QRY^Q02",
+  "message-type" : "1",
+  "message-control-id" : "P",
+  "processing-id" : "2.3.1",
+  "version-id" : "",
+  "sequence-number" : "",
+  "continuation-pointer" : "",
+  "accept-ack-type" : "",
+  "application-ack-type" : "",
+  "country-code" : "ASCII",
+  "character-set" : "",
+  "principal-language" : "",
+  "alternate-char-set" : "\n                  ",
+  "version-releases" : null,
+  "message-profile-id" : null,
+  "sending-responsible-org" : null,
+  "receiving-responsible-org" : null,
+  "sending-network-address" : null,
+  "receiving-network-address" : null
+}, {
+  "where-subject-filter" : "",
+  "when-data-start-datetime" : "",
+  "when-data-end-datetime" : "",
+  "who-subject-filter" : "",
+  "what-user-qualifier" : "",
+  "other-qry-subject-filter" : "RCT",
+  "which-date-time-qualifier" : "COR",
+  "which-date-time-status" : "ALL",
+  "date-selection-criteria" : ""
+} ]
+
+Parsed QCK Message in JSON:
+[ {
+  "field-separator" : "",
+  "encoding-characters" : "",
+  "sending-application" : "^~\\&",
+  "sending-facility" : "",
+  "receiving-application" : "",
+  "receiving-facility" : "",
+  "datetime-of-message" : "",
+  "security" : "20240823103911",
+  "message-type" : "",
+  "message-control-id" : "QCK^Q02",
+  "processing-id" : "1",
+  "version-id" : "P",
+  "sequence-number" : "2.3.1",
+  "continuation-pointer" : "",
+  "accept-ack-type" : "",
+  "application-ack-type" : "",
+  "country-code" : "",
+  "character-set" : "",
+  "principal-language" : "ASCII",
+  "alternate-char-set" : null,
+  "version-releases" : null,
+  "message-profile-id" : null,
+  "sending-responsible-org" : null,
+  "receiving-responsible-org" : null,
+  "sending-network-address" : null,
+  "receiving-network-address" : null
+}, {
+  "acknowledgment-code" : "AA",
+  "message-control-id" : "1",
+  "text-message" : "Message accepted",
+  "expected-sequence-number" : "",
+  "delayed-ack-type" : "",
+  "error-condition" : "0"
+} ]
+
