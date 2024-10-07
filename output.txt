@@ -1,53 +1,8 @@
 QCK Message:
-
-
-MSH|^~\&|||||20240823103911||QCK^Q02|1|P|2.3.1||||||ASCII|||
-
-MSH|||^~\&|||||20240823103911||QCK^Q02|1|P|2.3.1||||||ASCII|||
-
-
-MSA|AA|1|Message accepted|||0
-ERR|0
-QAK|SR|OK
+MSH|^~\&|||||20240823103911||QCK^Q02|1|P|2.3.1||||||ASCII|||MSA|AA|1|Message accepted|||0|ERR|0|QAK|SR|OK|
 
 DSR Message:
-MSH|||^~\&|||||20241001172113||DSR^Q03|1|P|2.3.1||||||ASCII|||
-MSA|AA|1|Message accepted|||0
-ERR|0
-QAK|SR|OK
-QRD|||RD|20240830||||RD||||T
-QRF||||||RCT|COR|ALL|
-DSP|1||John Doe|||
-DSP|2||2^27|||
-DSP|3||John Doe|||
-DSP|4|||||
-DSP|5||M|||
-DSP|6|||||
-DSP|7|||||
-DSP|8|||||
-DSP|9|||||
-DSP|10|||||
-DSP|11|||||
-DSP|12|||||
-DSP|13|||||
-DSP|15||outpatient|||
-DSP|16|||||
-DSP|17||own|||
-DSP|18|||||
-DSP|19|||||
-DSP|20|||||
-DSP|21||20240830|||
-DSP|22||3|||
-DSP|23||20241001172113|||
-DSP|24||N|||
-DSP|25|||||
-DSP|26|||||
-DSP|27|||||
-DSP|28||Dept1|||
-DSP|29||ALB|||
-DSP|30||CREA|||
-DSP|31||GLI|||
-DSC||
+MSH|^~\&|||||20241001172113||DSR^Q03|1|P|2.3.1||||||ASCII|||MSA|AA|1|Message accepted|||0|ERR|0|QAK|SR|OK|QRD|20241003002452|R|D|12|||RD|00000046-2|OTH|||T|QRF||||||RCT|COR|ALL||DSP|1||John Doe|||DSP|2||2^27|||DSP|3||John Doe|||DSP|4|||||DSP|5||M|||DSP|6|||||DSP|7|||||DSP|8|||||DSP|9|||||DSP|10|||||DSP|11|||||DSP|12|||||DSP|13|||||DSP|15||outpatient|||DSP|16|||||DSP|17||own|||DSP|18|||||DSP|19|||||DSP|20|||||DSP|21||20240830|||DSP|22||3|||DSP|23||20241001172113|||DSP|24||N|||DSP|25|||||DSP|26|||||DSP|27|||||DSP|28||Dept1|||DSP|29||ALB|||DSP|30||CREA|||DSP|31||GLI|||DSC||
 
 Parsed QRY Message in JSON:
 [ {
@@ -89,28 +44,28 @@ Parsed QRY Message in JSON:
   "date-selection-criteria" : ""
 } ]
 
-Parsed QCK Message in JSON:
+Parsed ORU Message in JSON:
 [ {
-  "field-separator" : "",
+  "field-separator" : "^~\\&",
   "encoding-characters" : "",
-  "sending-application" : "^~\\&",
+  "sending-application" : "",
   "sending-facility" : "",
   "receiving-application" : "",
-  "receiving-facility" : "",
+  "receiving-facility" : "20240418123839",
   "datetime-of-message" : "",
-  "security" : "20240823103911",
-  "message-type" : "",
-  "message-control-id" : "QCK^Q02",
-  "processing-id" : "1",
-  "version-id" : "P",
-  "sequence-number" : "2.3.1",
+  "security" : "ORU^R01",
+  "message-type" : "5",
+  "message-control-id" : "P",
+  "processing-id" : "2.3.1",
+  "version-id" : "",
+  "sequence-number" : "",
   "continuation-pointer" : "",
-  "accept-ack-type" : "",
+  "accept-ack-type" : "0",
   "application-ack-type" : "",
-  "country-code" : "",
+  "country-code" : "ASCII",
   "character-set" : "",
-  "principal-language" : "ASCII",
-  "alternate-char-set" : null,
+  "principal-language" : "",
+  "alternate-char-set" : "\n                  ",
   "version-releases" : null,
   "message-profile-id" : null,
   "sending-responsible-org" : null,
@@ -118,58 +73,141 @@ Parsed QCK Message in JSON:
   "sending-network-address" : null,
   "receiving-network-address" : null
 }, {
-  "acknowledgment-code" : "AA",
-  "message-control-id" : "1",
-  "text-message" : "Message accepted",
-  "expected-sequence-number" : "",
-  "delayed-ack-type" : "",
-  "error-condition" : "0"
+  "set-id" : "1",
+  "patient-id" : "",
+  "patient-identifier-list" : "",
+  "alternate-patient-id" : "",
+  "patient-name" : "GEORGINA PETRONILHA DE MELO",
+  "mother-maiden-name" : "",
+  "datetime-of-birth" : "",
+  "administrative-sex" : "F",
+  "patient-alias" : "",
+  "race" : "",
+  "address" : "",
+  "county-code" : "",
+  "phone-number-home" : "",
+  "phone-number-business" : "",
+  "primary-language" : "",
+  "marital-status" : "",
+  "religion" : "",
+  "patient-account-number" : "",
+  "ssn-number" : "",
+  "driver-license-number" : "",
+  "mother-identifier" : "",
+  "ethnic-group" : "",
+  "birth-place" : "",
+  "multiple-birth-indicator" : "",
+  "birth-order" : "",
+  "citizenship" : "FEMININA L 02",
+  "veterans-military-status" : "",
+  "nationality" : "",
+  "death-datetime" : "",
+  "death-indicator" : "",
+  "identity-unknown-indicator" : "\n                  ",
+  "identity-reliability-code" : null,
+  "last-update-datetime" : null,
+  "last-update-facility" : null,
+  "species-code" : null,
+  "breed-code" : null,
+  "strain" : null,
+  "production-class-code" : null,
+  "tribal-citizenship" : null
+}, {
+  "set-id" : "1",
+  "placer-order-number" : "GEOGINA",
+  "filler-order-number" : "3725",
+  "universal-service-id" : "^",
+  "priority" : "N",
+  "requested-datetime" : "20240418105847",
+  "observation-datetime" : "20240418105604",
+  "observation-end-datetime" : "20240418105604",
+  "collection-volume" : "",
+  "collector-identifier" : "1^13",
+  "specimen-action-code" : "",
+  "danger-code" : "",
+  "relevant-clinical-info" : "",
+  "specimen-received-datetime" : "20240418105604",
+  "specimen-source" : "Soro",
+  "ordering-provider" : "",
+  "order-callback-phone" : "",
+  "placer-field-1" : "",
+  "placer-field-2" : "",
+  "filler-field-1" : "",
+  "filler-field-2" : "",
+  "results-rpt-status-chg-datetime" : "",
+  "charge-to-practice" : "",
+  "diagnostic-service-id" : "",
+  "result-status" : "",
+  "parent-result" : "",
+  "quantity-timing" : "",
+  "result-copies-to" : "",
+  "parent" : "",
+  "transportation-mode" : "",
+  "reason-for-study" : "",
+  "principal-result-interpreter" : "",
+  "assistant-result-interpreter" : "",
+  "technician" : "",
+  "transcriptionist" : "",
+  "scheduled-datetime" : "",
+  "number-of-samples" : "",
+  "transport-logistics" : "",
+  "transport-arrangement" : "",
+  "transport-arranged" : "",
+  "escort-required" : "",
+  "planned-patient-transport" : "",
+  "procedure-code" : "",
+  "procedure-code-modifier" : "",
+  "placer-supplemental-service-info" : "",
+  "filler-supplemental-service-info" : "",
+  "medically-necessary-dupl-procedure-reason" : "",
+  "result-handling" : "\n                  "
+}, {
+  "set-id" : "1",
+  "value-type" : "NM",
+  "observation-identifier" : "",
+  "observation-sub-id" : "CK NAC UV AA líquida",
+  "observation-value" : "61.131959",
+  "units" : "U/L",
+  "references-range" : "-",
+  "abnormal-flags" : "N",
+  "probability" : "",
+  "nature-of-abnormal-test" : "",
+  "observation-result-status" : "F",
+  "effective-datetime" : "",
+  "observation-operator" : "61.131959",
+  "observation-method" : "20240418112956",
+  "equipment-instance-identifier" : "",
+  "analysis-datetime" : "",
+  "observation-site" : "0",
+  "observation-source" : "",
+  "observation-identifier-alternates" : "\n                  "
+}, {
+  "set-id" : "2",
+  "value-type" : "NM",
+  "observation-identifier" : "",
+  "observation-sub-id" : "Creatinina cinética AA líquida - Tca. compensada",
+  "observation-value" : "0.962758",
+  "units" : "mg/dL",
+  "references-range" : "-",
+  "abnormal-flags" : "N",
+  "probability" : "",
+  "nature-of-abnormal-test" : "",
+  "observation-result-status" : "F",
+  "effective-datetime" : "",
+  "observation-operator" : "0.962758",
+  "observation-method" : "20240418063201",
+  "equipment-instance-identifier" : "",
+  "analysis-datetime" : "",
+  "observation-site" : "0",
+  "observation-source" : "SLP",
+  "observation-identifier-alternates" : null
 } ]
 
 QCK Message:
-MSH|||^~\&|||||20240823103911||QCK^Q02|1|P|2.3.1||||||ASCII|||
-MSA|AA|1|Message accepted|||0
-ERR|0
-QAK|SR|OK
+MSH|^~\&|||||20240823103911||QCK^Q02|1|P|2.3.1||||||ASCII|||MSA|AA|1|Message accepted|||0|ERR|0|QAK|SR|OK|
 
 DSR Message:
-MSH|||^~\&|||||20241001172113||DSR^Q03|1|P|2.3.1||||||ASCII|||
-MSA|AA|1|Message accepted|||0
-ERR|0
-QAK|SR|OK
-QRD|||RD|20240830||||RD||||T
-QRF||||||RCT|COR|ALL|
-DSP|1||John Doe|||
-DSP|2||2^27|||
-DSP|3||John Doe|||
-DSP|4|||||
-DSP|5||M|||
-DSP|6|||||
-DSP|7|||||
-DSP|8|||||
-DSP|9|||||
-DSP|10|||||
-DSP|11|||||
-DSP|12|||||
-DSP|13|||||
-DSP|15||outpatient|||
-DSP|16|||||
-DSP|17||own|||
-DSP|18|||||
-DSP|19|||||
-DSP|20|||||
-DSP|21||20240830|||
-DSP|22||3|||
-DSP|23||20241001172113|||
-DSP|24||N|||
-DSP|25|||||
-DSP|26|||||
-DSP|27|||||
-DSP|28||Dept1|||
-DSP|29||ALB|||
-DSP|30||CREA|||
-DSP|31||GLI|||
-DSC||
+MSH|^~\&|||||20241001172113||DSR^Q03|1|P|2.3.1||||||ASCII|||MSA|AA|1|Message accepted|||0|ERR|0|QAK|SR|OK|QRD|20241003002452|R|D|12|||RD|00000046-2|OTH|||T|QRF||||||RCT|COR|ALL||DSP|1||John Doe|||DSP|2||2^27|||DSP|3||John Doe|||DSP|4|||||DSP|5||M|||DSP|6|||||DSP|7|||||DSP|8|||||DSP|9|||||DSP|10|||||DSP|11|||||DSP|12|||||DSP|13|||||DSP|15||outpatient|||DSP|16|||||DSP|17||own|||DSP|18|||||DSP|19|||||DSP|20|||||DSP|21||20240830|||DSP|22||3|||DSP|23||20241001172113|||DSP|24||N|||DSP|25|||||DSP|26|||||DSP|27|||||DSP|28||Dept1|||DSP|29||ALB|||DSP|30||CREA|||DSP|31||GLI|||DSC||
 
 Parsed QRY Message in JSON:
 [ {
@@ -211,28 +249,28 @@ Parsed QRY Message in JSON:
   "date-selection-criteria" : ""
 } ]
 
-Parsed QCK Message in JSON:
+Parsed ORU Message in JSON:
 [ {
-  "field-separator" : "",
+  "field-separator" : "^~\\&",
   "encoding-characters" : "",
-  "sending-application" : "^~\\&",
+  "sending-application" : "",
   "sending-facility" : "",
   "receiving-application" : "",
-  "receiving-facility" : "",
+  "receiving-facility" : "20240418123839",
   "datetime-of-message" : "",
-  "security" : "20240823103911",
-  "message-type" : "",
-  "message-control-id" : "QCK^Q02",
-  "processing-id" : "1",
-  "version-id" : "P",
-  "sequence-number" : "2.3.1",
+  "security" : "ORU^R01",
+  "message-type" : "5",
+  "message-control-id" : "P",
+  "processing-id" : "2.3.1",
+  "version-id" : "",
+  "sequence-number" : "",
   "continuation-pointer" : "",
-  "accept-ack-type" : "",
+  "accept-ack-type" : "0",
   "application-ack-type" : "",
-  "country-code" : "",
+  "country-code" : "ASCII",
   "character-set" : "",
-  "principal-language" : "ASCII",
-  "alternate-char-set" : null,
+  "principal-language" : "",
+  "alternate-char-set" : "\n                  ",
   "version-releases" : null,
   "message-profile-id" : null,
   "sending-responsible-org" : null,
@@ -240,11 +278,133 @@ Parsed QCK Message in JSON:
   "sending-network-address" : null,
   "receiving-network-address" : null
 }, {
-  "acknowledgment-code" : "AA",
-  "message-control-id" : "1",
-  "text-message" : "Message accepted",
-  "expected-sequence-number" : "",
-  "delayed-ack-type" : "",
-  "error-condition" : "0"
+  "set-id" : "1",
+  "patient-id" : "",
+  "patient-identifier-list" : "",
+  "alternate-patient-id" : "",
+  "patient-name" : "GEORGINA PETRONILHA DE MELO",
+  "mother-maiden-name" : "",
+  "datetime-of-birth" : "",
+  "administrative-sex" : "F",
+  "patient-alias" : "",
+  "race" : "",
+  "address" : "",
+  "county-code" : "",
+  "phone-number-home" : "",
+  "phone-number-business" : "",
+  "primary-language" : "",
+  "marital-status" : "",
+  "religion" : "",
+  "patient-account-number" : "",
+  "ssn-number" : "",
+  "driver-license-number" : "",
+  "mother-identifier" : "",
+  "ethnic-group" : "",
+  "birth-place" : "",
+  "multiple-birth-indicator" : "",
+  "birth-order" : "",
+  "citizenship" : "FEMININA L 02",
+  "veterans-military-status" : "",
+  "nationality" : "",
+  "death-datetime" : "",
+  "death-indicator" : "",
+  "identity-unknown-indicator" : "\n                  ",
+  "identity-reliability-code" : null,
+  "last-update-datetime" : null,
+  "last-update-facility" : null,
+  "species-code" : null,
+  "breed-code" : null,
+  "strain" : null,
+  "production-class-code" : null,
+  "tribal-citizenship" : null
+}, {
+  "set-id" : "1",
+  "placer-order-number" : "GEOGINA",
+  "filler-order-number" : "3725",
+  "universal-service-id" : "^",
+  "priority" : "N",
+  "requested-datetime" : "20240418105847",
+  "observation-datetime" : "20240418105604",
+  "observation-end-datetime" : "20240418105604",
+  "collection-volume" : "",
+  "collector-identifier" : "1^13",
+  "specimen-action-code" : "",
+  "danger-code" : "",
+  "relevant-clinical-info" : "",
+  "specimen-received-datetime" : "20240418105604",
+  "specimen-source" : "Soro",
+  "ordering-provider" : "",
+  "order-callback-phone" : "",
+  "placer-field-1" : "",
+  "placer-field-2" : "",
+  "filler-field-1" : "",
+  "filler-field-2" : "",
+  "results-rpt-status-chg-datetime" : "",
+  "charge-to-practice" : "",
+  "diagnostic-service-id" : "",
+  "result-status" : "",
+  "parent-result" : "",
+  "quantity-timing" : "",
+  "result-copies-to" : "",
+  "parent" : "",
+  "transportation-mode" : "",
+  "reason-for-study" : "",
+  "principal-result-interpreter" : "",
+  "assistant-result-interpreter" : "",
+  "technician" : "",
+  "transcriptionist" : "",
+  "scheduled-datetime" : "",
+  "number-of-samples" : "",
+  "transport-logistics" : "",
+  "transport-arrangement" : "",
+  "transport-arranged" : "",
+  "escort-required" : "",
+  "planned-patient-transport" : "",
+  "procedure-code" : "",
+  "procedure-code-modifier" : "",
+  "placer-supplemental-service-info" : "",
+  "filler-supplemental-service-info" : "",
+  "medically-necessary-dupl-procedure-reason" : "",
+  "result-handling" : "\n                  "
+}, {
+  "set-id" : "1",
+  "value-type" : "NM",
+  "observation-identifier" : "",
+  "observation-sub-id" : "CK NAC UV AA líquida",
+  "observation-value" : "61.131959",
+  "units" : "U/L",
+  "references-range" : "-",
+  "abnormal-flags" : "N",
+  "probability" : "",
+  "nature-of-abnormal-test" : "",
+  "observation-result-status" : "F",
+  "effective-datetime" : "",
+  "observation-operator" : "61.131959",
+  "observation-method" : "20240418112956",
+  "equipment-instance-identifier" : "",
+  "analysis-datetime" : "",
+  "observation-site" : "0",
+  "observation-source" : "",
+  "observation-identifier-alternates" : "\n                  "
+}, {
+  "set-id" : "2",
+  "value-type" : "NM",
+  "observation-identifier" : "",
+  "observation-sub-id" : "Creatinina cinética AA líquida - Tca. compensada",
+  "observation-value" : "0.962758",
+  "units" : "mg/dL",
+  "references-range" : "-",
+  "abnormal-flags" : "N",
+  "probability" : "",
+  "nature-of-abnormal-test" : "",
+  "observation-result-status" : "F",
+  "effective-datetime" : "",
+  "observation-operator" : "0.962758",
+  "observation-method" : "20240418063201",
+  "equipment-instance-identifier" : "",
+  "analysis-datetime" : "",
+  "observation-site" : "0",
+  "observation-source" : "SLP",
+  "observation-identifier-alternates" : null
 } ]
 

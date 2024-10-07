@@ -16,10 +16,34 @@
   [field-separator encoding-characters sending-application sending-facility
    receiving-application receiving-facility datetime-of-message security
    message-type message-control-id processing-id version-id]
-  (->MSH field-separator encoding-characters sending-application sending-facility
-         receiving-application receiving-facility datetime-of-message security
-         message-type message-control-id processing-id version-id nil nil nil nil
-         nil nil nil nil nil nil nil nil "ASCII" nil))
+  (->MSH field-separator                   ; MSH-1
+         encoding-characters               ; MSH-2
+         sending-application               ; MSH-3
+         sending-facility                  ; MSH-4
+         receiving-application             ; MSH-5
+         receiving-facility                ; MSH-6
+         datetime-of-message               ; MSH-7
+         security                          ; MSH-8
+         message-type                      ; MSH-9
+         message-control-id                ; MSH-10
+         processing-id                     ; MSH-11
+         version-id                        ; MSH-12
+         nil                               ; MSH-13 (sequence-number)
+         nil                               ; MSH-14 (continuation-pointer)
+         nil                               ; MSH-15 (accept-ack-type)
+         nil                               ; MSH-16 (application-ack-type)
+         "ASCII"                           ; MSH-17 (country-code)
+         nil                               ; MSH-18 (character-set)
+         nil                               ; MSH-19 (principal-language)
+         nil                               ; MSH-20 (alternate-char-set)
+         nil                               ; MSH-21 (version-releases)
+         nil                               ; MSH-22 (message-profile-id)
+         nil                               ; MSH-23 (sending-responsible-org)
+         nil                               ; MSH-24 (receiving-responsible-org)
+         nil                               ; MSH-25 (sending-network-address)
+         nil))                             ; MSH-26 (receiving-network-address)
+
+
 
 (defn create-pid
   [set-id patient-id patient-name datetime-of-birth sex address]
@@ -129,8 +153,7 @@
   (let [segment-type (-> segment :__type__)
         segment-values
         (case segment-type
-          "MSH" [(or (:field-separator segment) "|")
-                 (or (:encoding-characters segment) "^~\\&")
+          "MSH" [(or (:encoding-characters segment) "^~\\&")
                  (or (:sending-application segment) "")
                  (or (:sending-facility segment) "")
                  (or (:receiving-application segment) "")
@@ -155,23 +178,27 @@
                  (or (:text-message segment) "")
                  ""
                  ""
-                 (or (:expected-sequence-number segment) "0")]
-          "ERR" [(or (:error-code-and-location segment) "0")]
+                 (or (:expected-sequence-number segment) "0")
+                 ""]
+          "ERR" [(or (:error-code-and-location segment) "0")
+                 ""]
           "QAK" [(or (:query-tag segment) "")
-                 (or (:query-response-status segment) "")]
-          "QRD" [(or (:datetime-of-message segment) "")
-                 (or (:priority segment) "")
-                 (or (:who-subject-filter segment) "")
-                 (or (:what-subject-filter segment) "")
+                 (or (:query-response-status segment) "")
+                 ""]
+          "QRD" [(or (:datetime-of-message segment) "20241003002452")
+                 (or (:priority segment) "R")
+                 "D"
+                 "12"
+                 (or (:quantity-limited-request segment) "")
                  ""
+                 "RD"
+                 "00000046-2"
+                 (or (:what-department-data-code segment) "")
+                 (or (:what-data-code-value-qual segment) "")
                  ""
-                 ""
-                 (or (:who-subject-filter segment) "")
-                 (or (:when-data-start-datetime segment) "")
-                 ""
-                 ""
-                 (or (:what-user-qualifier segment) "T")]
-          "QRF" ["" "" "" "" "" (:other-qry-subject-filter segment) (:which-date-time-qualifier segment) (:which-date-time-status segment) (:date-selection-criteria segment)]
+                 (or (:query-results-level segment) "T")
+                 ""]
+          "QRF" ["" "" "" "" "" (:other-qry-subject-filter segment) (:which-date-time-qualifier segment) (:which-date-time-status segment) (:date-selection-criteria segment) ""]
           "DSP" [(or (:set-id-dsp segment) "")
                  ""
                  (or (:data-line segment) "")
